@@ -59,10 +59,9 @@ fi
 NEWLINE_BEFORE_PROMPT="yes"
 
 if [ "$color_prompt" = yes ]; then
-PS1='${debian_chroot:+($debian_chroot)}\033[0;39m\]\u\[\033[0;33m\]@\[\033[38;5;117m\h\[\033[00m\]\[\033[01;31m\][\[\033[0;34m\]\w\[\033[01;31m\]]\n\[\033[0;31m\]❯\[\033[0;33m\] \$ \033[00m\]'
-#PS1='${debian_chroot:+($debian_chroot)}┌─[\[\033[0;32m\]\u\[\033[0;37m\]@\[\033[38;5;117m\]\h\[\033[00m\]]─[\[\033[0;33m\]\w\[\033[00m\]]\n└──$ '
-#PS1='╭─[\[\033[0;31m\]\[\033[0;32m\]\u\[\033[0;37m\]@\[\033[38;5;117m\]\h\[\033[0;31m\]\[\033[00m\]]━[\[\033[0;33m\]\w\[\033[00m\]]\n╰──$ '
-#PS1='[\[\033[0;31m\]\u\[\033[0;37m\]@\[\033[0;36m\]\h\[\033[0;31m\]]─[\[\033[0;37m\]\w\[\033[00m\]]\n❯ '
+#PS1='${debian_chroot:+($debian_chroot)}\033[0;39m\]\u\[\033[0;33m\]@\[\033[38;5;117m\h\[\033[00m\]\[\033[01;31m\][\[\033[0;32m\]\w\[\033[01;31m\]]\n\[\033[0;31m\]❯\[\033[0;33m\] \$ \033[00m\]'
+#PS1='${debian_chroot:+($debian_chroot)}\[\033[1;31m\]┌─[\[\033[0;36m\]\u\[\033[0;32m\]@\[\033[38;5;117m\]\h\[\033[00m\]\033[1;31m\]]─[\[\033[0;37m\]\w\[\033[00m\]\033[1;31m\]]\n└──╼\[\033[1;32m\] $ \[\033[00m\]'
+PS1='${debian_chroot:+($debian_chroot)}\[\033[1;32m\]┌─[\[\033[0;37m\]\u\[\033[0;32m\]@\[\033[38;5;117m\]\h\[\033[00m\]\033[1;32m\]]─[\[\033[0;33m\]\w\[\033[00m\]\033[1;32m\]]\n└──╼\[\033[1;32m\] $ \[\033[00m\]'
 
 
 else
@@ -125,3 +124,19 @@ if ! shopt -oq posix; then
   fi
 fi
 
+# ALIAS
+alias grepref='clear ; cat $HOME/references/grepref'
+alias ncref='clear ; cat $HOME/references/ncref'
+alias ftpref='clear ; cat $HOME/references/ftpref'
+alias smbref='clear ; cat $HOME/references/smbref'
+alias gobusterref='clear ; cat $HOME/references/gobusterref'
+alias common='clear ; cat $HOME/references/common'
+alias awkref='clear ; cat $HOME/references/awkref'
+alias venomref='clear ; cat $HOME/references/venomref'
+alias breakout='clear ; cat $HOME/references/breakout'
+alias ref='clear ; ls -l $HOME/references'
+alias revshells='clear ; cat $HOME/references/revshells'
+alias nfsref='clear ; cat $HOME/references/nfsref'
+alias passcrackref='clear ; cat $HOME/references/passcrackref'
+alias smtpref='clear ; cat $HOME/references/smtpref'
+alias gobusterref='clear ; cat $HOME/references/gobusterref'
