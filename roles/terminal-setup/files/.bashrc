@@ -61,7 +61,8 @@ NEWLINE_BEFORE_PROMPT="yes"
 if [ "$color_prompt" = yes ]; then
 #PS1='${debian_chroot:+($debian_chroot)}\033[0;39m\]\u\[\033[0;33m\]@\[\033[38;5;117m\h\[\033[00m\]\[\033[01;31m\][\[\033[0;32m\]\w\[\033[01;31m\]]\n\[\033[0;31m\]❯\[\033[0;33m\] \$ \033[00m\]'
 #PS1='${debian_chroot:+($debian_chroot)}\[\033[1;31m\]┌─[\[\033[0;36m\]\u\[\033[0;32m\]@\[\033[38;5;117m\]\h\[\033[00m\]\033[1;31m\]]─[\[\033[0;37m\]\w\[\033[00m\]\033[1;31m\]]\n└──╼\[\033[1;32m\] $ \[\033[00m\]'
-PS1='${debian_chroot:+($debian_chroot)}\[\033[1;32m\]┌─[\[\033[0;37m\]\u\[\033[0;32m\]@\[\033[38;5;117m\]\h\[\033[00m\]\033[1;32m\]]─[\[\033[0;33m\]\w\[\033[00m\]\033[1;32m\]]\n└──╼\[\033[1;32m\] $ \[\033[00m\]'
+#PS1='${debian_chroot:+($debian_chroot)}\[\033[1;32m\]┌─[\[\033[0;37m\]\u\[\033[0;32m\]@\[\033[38;5;117m\]\h\[\033[00m\]\033[1;32m\]]─[\[\033[0;37m\]\w\[\033[00m\]\033[1;32m\]]\n└──╼\[\033[1;32m\] $ \[\033[00m\]'
+PS1='${debian_chroot:+($debian_chroot)}\[\033[1;32m\]┌─[\[\033[0;37m\]\u\[\033[1;32m\]@\[\033[38;5;117m\]\h\[\033[00m\]\033[1;32m\]]─[\[\033[0;37m\]\w\033[1;32m\]]\n└──╼\[\033[1;32m\] $ \[\033[00m\]'
 
 
 else
@@ -140,3 +141,4 @@ alias nfsref='clear ; cat $HOME/references/nfsref'
 alias passcrackref='clear ; cat $HOME/references/passcrackref'
 alias smtpref='clear ; cat $HOME/references/smtpref'
 alias gobusterref='clear ; cat $HOME/references/gobusterref'
+alias nmapref='clear ; cat $HOME/references/nmapref'

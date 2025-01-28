@@ -101,3 +101,30 @@
         tmux run-shell ~/.tmux/plugins/tpm/tpm
       become: false
 
+      # load custom profile for mate terminal
+- name: "Read current mate terminal profiles"
+  dconf:
+    key: "/org/mate/terminal/global/profile-list"
+    state: "read"
+  register: "profile_list"
+
+- name: "profile_list was not set, setting"
+  set_fact:
+    profile_list: 
+      value: '["default"]'
+  when: profile_list.value is none
+
+- name: "Adding our profile"
+  set_fact:
+    new_profile_list: "{{ profile_list.value | regex_replace(']$', \", 'mul1x']\") }}"
+
+- name: "Writing updated profile list"
+  dconf:
+    key: "/org/mate/terminal/global/profile-list"
+    value: "{{ new_profile_list }}"
+  when: "'mul1x' not in profile_list.value"
+  
+- name: "Restoring mul1x Profile from Dump"
+  shell:
+    cmd: "dconf load /org/mate/terminal/profiles/mul1x/ < {{ role_path }}/files/flamur-bash"
+  when: "'mul1x' not in profile_list.value"

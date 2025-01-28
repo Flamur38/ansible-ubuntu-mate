@@ -14,7 +14,7 @@
     show_titlebar = False
     scrollbar_position = hidden
     scrollback_infinite = True
-    palette = "#1f2229:#d41919:#5ebdab:#fea44c:#367bf0:#9755b3:#49aee6:#e6e6e6:#198388:#ec0101:#47d4b9:#ff8a18:#277fff:#962ac3:#05a1f7:#ffffff"
+    palette = "#1f2229:#d41919:#c5ea8b:#fea44c:#367bf0:#9755b3:#49aee6:#e6e6e6:#198388:#ec0101:#c5ea8b:#ff8a18:#277fff:#962ac3:#05a1f7:#ffffff"
     use_system_font = False
     use_theme_colors = True
   [[black]]
@@ -26,11 +26,20 @@
     background_image_mode = tiling
     cursor_shape = ibeam
     font = Monospace 11
-    foreground_color = "#ffffff"
     show_titlebar = False
     scrollbar_position = hidden
     scrollback_infinite = True
-    palette = "#1f2229:#d41919:#5ebdab:#fea44c:#367bf0:#9755b3:#49aee6:#e6e6e6:#198388:#ec0101:#47d4b9:#ff8a18:#277fff:#962ac3:#05a1f7:#ffffff"
+    palette = "#000000:#d41919:#d2ea97:#fea44c:#367bf0:#9755b3:#49aee6:#ffffff:#198388:#ec0101:#d2ea97:#ff8a18:#277fff:#962ac3:#05a1f7:#ffffff"
+    use_system_font = False
+  [[htb]]
+    allow_bold = False
+    visible_bell = True
+    icon_bell = False
+    background_color = "#141d2b"
+    font = Monospace 11
+    foreground_color = "#a4b1cd"
+    show_titlebar = False
+    palette = "#000000:#ff3e3e:#c5ea8b:#b57c00:#0086ff:#9f00ff:#00d49c:#ffffff:#aaaaaa:#ff5d5d:#c5ea8b:#ffaf00:#2c9bff:#ac24fe:#2ee7b6:#ffffff"
     use_system_font = False
 [layouts]
   [[default]]

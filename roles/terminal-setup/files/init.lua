@@ -27,8 +27,7 @@ require("packer").startup(function(use)
     use "hrsh7th/nvim-cmp"               -- Autocompletion
     use "L3MON4D3/LuaSnip"               -- Snippet engine
     use 'ThePrimeagen/vim-be-good'       -- Practice Vim movements
-    use 'rose-pine/neovim'               -- Rose Pine theme
-    
+    use 'audibleblink/hackthebox.vim'    -- Hack The Box theme
 end)
 
 -- Treesitter configuration
@@ -54,12 +53,6 @@ vim.api.nvim_create_autocmd("FileType", {
     end
 })
 
--- Rosé Pine Theme Configuration
-require('rose-pine').setup({
-    disable_background = true,  -- Set to true if you want a transparent background
-    disable_float_background = true,  -- Transparent floating windows
-    dark_variant = 'main',  -- Options: 'main', 'moon', or 'dawn'
-})
+-- Apply the Hack The Box Theme
+vim.cmd('colorscheme hackthebox')
 
--- Apply the theme
-vim.cmd('colorscheme rose-pine')
